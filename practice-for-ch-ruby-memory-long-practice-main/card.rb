@@ -1,11 +1,18 @@
 class Card
-    def initialize(face_value, face )
+    def initialize(face_value)
         @face_value = face_value
-        @face_up = true  
+        @face_up = false  
+    end
+    def face_value
+        @face_value
+    end
+    def face_up
+        @face_up
     end
 
     def hide
         @face_up = false 
+
     end
 
     def reveal
@@ -14,7 +21,7 @@ class Card
 
 
     def value 
-         if @face_up = false
+         if @face_up == false
             p "face down"
             return 0
         else
