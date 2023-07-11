@@ -10,6 +10,7 @@ class Board
  def grid
   @grid
  end
+ 
  def cards
   @cards
  end
@@ -18,10 +19,12 @@ class Board
   row, col = pos
   @grid[row][col]
  end
+ 
  def []=(pos, value)
   row, col = pos
   @grid[row][col] = value
  end
+ 
  def populate
      size = 16
      i = 0
@@ -36,6 +39,16 @@ class Board
      end
     @grid
  end
+
+    def render
+        @grid.each do |subArray|
+            puts subArray.join(" ")
+        end
+    end
+
+    def won?
+        
+    end
  
 
 end
