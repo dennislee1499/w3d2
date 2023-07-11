@@ -23,19 +23,19 @@ class Board
   @grid[row][col] = value
  end
  def populate
-     cards = self.cards.shuffle
      size = 16
      i = 0
      while i < size
       randrow = rand(0...@grid.length)
       randcol = rand(0...@grid.length)
       randpos = [randrow, randcol]
-      if @grid[randpos] == " "
-      @grid[randpos] = cards[i]
+      if self[randpos] == " "
+      self[randpos] = cards[i]
       i += 1
       end
      end
     @grid
  end
+ 
 
 end
